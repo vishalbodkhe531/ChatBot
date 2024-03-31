@@ -39,8 +39,6 @@ h2{
 }
 
 .input{
-    position: fixed;
-    top: 78%;
     width: 20rem;
     display: flex;
 }
