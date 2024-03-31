@@ -73,7 +73,6 @@ textarea{
 /* main chat  */
 
 .main{
-    /* background-color: red; */
     height: 66vh;
     width: 100%;
     overflow-y: scroll;
@@ -120,6 +119,3 @@ img{
     display: flex;
 }
 
-@media screen {
-    
-}
