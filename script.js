@@ -1,8 +1,9 @@
-import { API_KEY } from "./api.js";
+// import { API_KEY } from "./api.js";
 const input = document.querySelector("textarea");
 const btn = document.querySelector("#done");
 const main = document.querySelector(".main");
 
+console.log("hi");
 btn.addEventListener("click", (e) => {
     if (input.value != '') {
         const userMsg = input.value.trim();
