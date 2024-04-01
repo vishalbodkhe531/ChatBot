@@ -1,21 +1,17 @@
+import { API_KEY } from "./api.js";
 const input = document.querySelector("textarea");
 const btn = document.querySelector("#done");
-const outgoingChat = document.querySelector(".outgoing-chat");
 const main = document.querySelector(".main");
-const incomingChat = document.querySelector(".incoming-chat");
-// let incomingChat;
-
 
 btn.addEventListener("click", (e) => {
-    if (input.value != '') {
+    if (input != '') {
+        const userMsg = input.value.trim();
         e.preventDefault();
-        outgoingChat.innerHTML += `<li>${input.value}</li>`;
+        main.innerHTML += `<div class="outgoing-chat"><li>${userMsg}</li></div>`;
         setTimeout(() => {
-            incomingChat.innerHTML += (`<div class="Hacker"><img src="https://aaah0mnbncqtinas.public.blob.vercel-storage.com/7qNsOOMwxV-no-background-qlt5YaxRta8YB9ryrpTNJUX9OmhLfU.png"/><li>${input.value}</li></div>`);
-            setTimeout(()=>{
-                incomingChat.innerHTML += (`<div class="Hacker"><img src="https://aaah0mnbncqtinas.public.blob.vercel-storage.com/7qNsOOMwxV-no-background-qlt5YaxRta8YB9ryrpTNJUX9OmhLfU.png"/><li>How Are you bro?</li></div>`);
-            },3000);
-            input.value = '';
+            main.innerHTML += (`<div class="incoming-chat"><div class="Hacker"><img src="https://aaah0mnbncqtinas.public.blob.vercel-storage.com/7qNsOOMwxV-no-background-qlt5YaxRta8YB9ryrpTNJUX9OmhLfU.png"/><li>${userMsg}</li></div></div>`);
+            generateResponse()
         }, 2000);
+        input.value = '';
     }
 });
