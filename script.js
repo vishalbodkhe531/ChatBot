@@ -4,7 +4,7 @@ const btn = document.querySelector("#done");
 const main = document.querySelector(".main");
 
 btn.addEventListener("click", (e) => {
-    if (input != '') {
+    if (input.value != '') {
         const userMsg = input.value.trim();
         e.preventDefault();
         main.innerHTML += `<div class="outgoing-chat"><li>${userMsg}</li></div>`;
